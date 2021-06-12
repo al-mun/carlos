@@ -96,7 +96,7 @@ header ("Location: index.php");					//Take me back home
 
     <tr>
       <td width="40%" height="74" align="right" valign="middle">Art name: </td>
-      <td><input type="text" name="item_name" id="item_name" required value="<?php echo $row["item_name"]; ?>"></td>
+      <td><input type="text" name="item_name" id="item_name" value="<?php echo $row["item_name"]; ?>"></td>
     </tr>
 
     <tr>
@@ -106,7 +106,7 @@ header ("Location: index.php");					//Take me back home
     </tr>
     <tr>
       	<td align="right" valign="middle">Art description: </td>
-		<td><textarea name="item_desc" id="item_desc" required rows="8" cols="21"><?php echo $row["item_desc"]; ?></textarea></td>
+		<td><textarea name="item_desc" id="item_desc" rows="8" cols="21"><?php echo $row["item_desc"]; ?></textarea></td>
 	</tr>
 	
     <tr>

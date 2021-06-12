@@ -147,7 +147,7 @@ a {
     text-transform: capitalize;
     -webkit-transition: all 0.3s linear;
     transition: all 0.3s linear;
-    color: rgb(255, 255, 255);
+    color: white;
     letter-spacing: 0.25rem;
     display: inline-block;
     margin-bottom: 1.5rem;
@@ -168,9 +168,10 @@ a {
     color: var(--clr-grey-1);
     -webkit-transition: all 0.3s linear;
     transition: all 0.3s linear;
+    color: white;
   }
   .social-icon:hover {
-    color: yellow;
+    color: rgb(53, 53, 53);
   }
   .social-icons-centered{
     display: grid;
@@ -229,6 +230,8 @@ main a{
   max-width: 1200px;
   margin: auto;
 }
+
+
 /*styles for item small********************************/
 
 .item_small{
@@ -274,13 +277,89 @@ main a{
 .item_small a{
 	font-size: 14px;
   color:rgb(12, 41, 12);
-  display: grid;
-  
+  display: grid; 
 }
 
-.art-buttons{
-  width: fit-content;
-  margin: auto;
+
+
+.show-button{
+  width: 13rem;
+  height: 3rem;
+  background-color: rgb(116, 116, 116);
+  border-radius: 4px;
+  color: rgb(214, 214, 214);
+  transition: all 0.2s linear;
+}
+.show-button:hover{
+  background-color: rgb(143, 143, 143);
+  cursor: pointer;
+}
+.add-art{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 11rem;
+  height: 3rem;
+  background-color: rgb(122, 122, 122);
+  border-radius: 4px;
+  color: rgb(255, 255, 255);
+  transition: all 0.2s linear;
+}
+.add-art:hover{
+  background-color: rgb(148, 148, 148);
+  cursor: pointer;
+}
+.modify-buttons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 7rem;
+  height: 2rem;
+  background-color: rgb(190, 190, 190);
+  border-radius: 4px;
+  color: rgb(221, 221, 221);
+  transition: all 0.2s linear;
+}
+.modify-buttons:hover{
+  background-color: rgb(235, 235, 62);
+  cursor: pointer;
+}
+.delete-buttons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 7rem;
+  height: 2rem;
+  background-color: rgb(158, 158, 158);
+  border-radius: 4px;
+  color: black;
+  transition: all 0.2s linear;
+}
+.delete-buttons:hover{
+  background-color: rgb(204, 64, 64);
+  cursor: pointer;
+}
+.add-buttons{
+  display: none;
+  margin-top: 2rem;
+  flex-direction: column;
+}
+.add-buttons2{
+  display: flex;
+}
+.modify-buttons{
+  display: none;
+}
+.delete-buttons{
+  display: none;
+}
+
+
+
+
+
+/*.art-buttons button{
+  
 }
 /*styles for item big********************************/
 
