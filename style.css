@@ -280,7 +280,13 @@ main a{
   display: grid; 
 }
 
-
+.intro{
+  line-height: 2rem;
+  margin: auto;
+  max-width: 1250px;
+  text-align: left;
+  padding: 2rem;
+}
 
 .show-button{
   width: 13rem;

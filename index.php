@@ -27,7 +27,7 @@ switch($orderby){				//Find out what to order by.
 }
 
 require( "config.php" );
-$sql_get_all = "SELECT * FROM crud_tbl ORDER BY $sql_order";		//Compose query
+$sql_get_all = "SELECT * FROM crud_tbl ORDER BY $sql_order";		//variable that contains SQL to submit query for data
 $result = $makeconnection->query( $sql_get_all );				//Send query, but answer int $results
 
 ?>
@@ -44,8 +44,8 @@ $result = $makeconnection->query( $sql_get_all );				//Send query, but answer in
 <script>
 
 function JS_delete_item(item_id){
-	if (confirm('Are you sure you want to delete this item?')) {
-		window.location.href = 'delete.php?id='+item_id;
+	if (confirm('Are you sure you want to delete this item?')) {		//confirm deletion
+		window.location.href = 'delete.php?id='+item_id;				//
 	}
 }		
 	function jumpMenu(selObj){ 													//what to do when select is selected.
@@ -90,15 +90,27 @@ function JS_delete_item(item_id){
                         <li><a href="about.html">about</a></li>
                         <!-- <li><a href="work.html">work</a></li> -->
                         <li><a href="contact.html">contact</a></li>
-                    </ul>
-                </div>
+					</ul>
+					<div class="social-icon">
+						<a href="//www.behance.net/carlostamaed12" class="social-icon"><i class="fab fa-behance"></i></a>
+                	</div>
             </aside>
+			<div class="intro">
+			<h3>This website was created as a demo for an artist portfolio page. The artist would have 
+				the ability to add more art by clicking below, or modifying/deleting art. They can also add descriptions, and titles. All of this would be uploaded to a 
+				database through PHP.
+			</h3>
+			</div>
 
+			<button class="show-button" onclick="addButtons()"><h4>Show Upload</h4></button>
+			<div class="add-buttons">
+				<h4>Using this button you can add more images to this gallery. </h4><br><br>
+				<a href="add.php" class="add-art"><h4>+ Add Art</h4></a>
+			</div>
+			<br>
+			<br>
 		</header>
-
 		<main>
-
-
 		<div id="item_catalog" class="art-catelog">
 			<?php while ($row = $result->fetch_assoc()) { ?>
 			
@@ -114,15 +126,18 @@ function JS_delete_item(item_id){
 
 				</a>
 
-				<!-- <p class="art-buttons"><a href="modify.php?id=<?php echo $row["item_id"]; ?>">Modify</a></p>
-				<p class="art-buttons"><a href="javascript:JS_delete_item(<?php echo $row['item_id']; ?>);">Delete</a></p> -->
+				<div class="add-buttons2">
+					<p><a class="modify-buttons" href="modify.php?id=<?php echo $row["item_id"]; ?>">Modify</a></p>
+					<p><a class="delete-buttons" href="javascript:JS_delete_item(<?php echo $row['item_id']; ?>);">Delete</a></p> 
+				</div>
+
 			</div>
 			
 			<!--end item small-->
 		
 			<?php } //end while?>
 			
-			</div>
+		</div>
 		<!--end item catalog-->
 		
 		<div class="myclear"></div>
