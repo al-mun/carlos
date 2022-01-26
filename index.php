@@ -127,7 +127,7 @@ function JS_delete_item(item_id){
 				</a>
 
 				<div class="add-buttons2">
-					<p><a class="modify-buttons" href="modify.php?id=<?php echo $row["item_id"]; ?>">Modify</a></p>
+					<p><a class="modify-buttons" href="modify.php?id=<?php echo $row["item_id"]; ?>">Modify </a></p>
 					<p><a class="delete-buttons" href="javascript:JS_delete_item(<?php echo $row['item_id']; ?>);">Delete</a></p> 
 				</div>
 
